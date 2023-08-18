@@ -5,7 +5,7 @@ include('conn.php');
  
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,17 +36,17 @@ include('conn.php');
 
 <?php
 if(isset($_POST['submit'])){
-  print_r($_POST);
-//     $id = $_POST['id'];
-//     $name = $_POST['name'];
-//     $age = $_POST['age'];
-//     $gender = $_POST['gender'];
+  // print_r($_POST);
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
 
-// $query = "INSERT INTO `azadi` ( `name`, `age`, `gender`) VALUES ('$name', '$age', '$gender')";
-// $result = mysqli_query($conn, $query);
-// if(!$result){
-//     die("query failed");
-// }
+$query = "INSERT INTO `azadi` ( `name`, `age`, `gender`) VALUES ('$name', '$age', '$gender')";
+$result = mysqli_query($conn, $query);
+if(!$result){
+    die("query failed");
+}
 }
 ?>
 
